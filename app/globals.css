@@ -1,26 +1,73 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-left: #197dff;
+  --primary-right: #2c4dff;
+  --secondary: #f1f2f8;
+  --sidebar: #fff;
+  --sidebar-foreground: hsl(240 5.3% 26.1%);
+  --sidebar-primary: hsl(240 5.9% 10%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(240 4.8% 95.9%);
+  --sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --sidebar-border: hsl(220 13% 91%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-first: var(--primary-left);
+  --color-last: var(--primary-right);
+  --color-secondary: var(--secondary);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .bg-gradient {
+    @apply bg-gradient-to-r from-first to-last;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-first to-last bg-clip-text text-transparent;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .container {
+    @apply px-4 xl:px-0 md:mx-auto max-w-full md:max-w-[77rem];
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #197dff #f1f2f8;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, var(--first), var(--last));
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--secondary);
+  border-radius: 8px;
 }
