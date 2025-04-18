@@ -1,5 +1,4 @@
 import { Input } from "./ui/input";
-import { Checkbox } from "./ui/checkbox";
 
 export const RegisterFormUI = () => {
   return (
@@ -39,7 +38,7 @@ export const RegisterFormUI = () => {
         />
       </div>
       <div className="flex items-center space-x-2">
-        <Checkbox id="terms" className="" />
+        {/* <Checkbox id="terms" className="" /> */}
         <label
           htmlFor="terms"
           className="text-md text-black leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

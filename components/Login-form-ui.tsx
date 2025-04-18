@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Input } from "./ui/input";
-import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
 
 export const LoginFormUI = () => {
@@ -42,7 +41,7 @@ export const LoginFormUI = () => {
         Quên mật khẩu ?
       </Link>
       <div className="flex items-center space-x-2">
-        <Checkbox id="terms" className="" />
+        {/* <Checkbox id="terms" className="" /> */}
         <label
           htmlFor="terms"
           className="text-sm text-black leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
