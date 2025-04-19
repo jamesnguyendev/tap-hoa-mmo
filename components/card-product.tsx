@@ -76,7 +76,7 @@ const CardProduct = () => {
           <span className="font-semibold line-clamp-1 mt-2.5">
             {item.title}
           </span>
-          <div className="flex items-center justify-between text-sm md:text-md lg:text-lg ">
+          <div className="flex items-center justify-between text-sm md:text-md lg:text-[15px] text-gray-700 ">
             <span className="line-clamp-1">{item.seller}</span>
             <span>{item.price}</span>
           </div>
