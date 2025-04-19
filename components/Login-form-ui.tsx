@@ -40,18 +40,23 @@ export const LoginFormUI = () => {
       >
         Quên mật khẩu ?
       </Link>
-      <div className="flex items-center space-x-2">
-        {/* <Checkbox id="terms" className="" /> */}
+      <div className="flex items-center space-x-2 ">
+        <input
+          id="terms"
+          type="checkbox"
+          value=""
+          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm  "
+        />
         <label
           htmlFor="terms"
-          className="text-sm text-black leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          className="text-sm  text-black leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
-          Ghi nhớ đăng nhập{" "}
+          Ghi nhớ đăng nhập
         </label>
       </div>
       <div className="flex justify-center items-center mt-4">
         <button className="text-white bg-gradient font-semibold cursor-pointer px-4 min-h-11 py-3 w-full rounded-lg hover:bg-last hover:bg-none">
-          Đăng nhập/Đăng ký
+          Đăng nhập
         </button>
       </div>
       <Link

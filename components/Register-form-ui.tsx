@@ -38,7 +38,12 @@ export const RegisterFormUI = () => {
         />
       </div>
       <div className="flex items-center space-x-2">
-        {/* <Checkbox id="terms" className="" /> */}
+        <input
+          id="terms"
+          type="checkbox"
+          value=""
+          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm  "
+        />
         <label
           htmlFor="terms"
           className="text-md text-black leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
